@@ -27,3 +27,8 @@ Use these when practicing legitimate GitHub workflows in this lab.
 - [ ] Second contributor is a real GitHub user who agreed to help
 - [ ] Both people make meaningful commits on the same PR
 - [ ] Co-authored-by trailer used only when accurate
+## Verifying a change locally
+
+- [ ] Run `pwsh ./scripts/validate-checklist.ps1` after editing the checklist
+- [ ] Confirm the script prints OK before opening a pull request
+- [ ] Link related issues in the PR description when applicable
