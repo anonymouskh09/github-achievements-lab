@@ -1,6 +1,15 @@
 # Validates workflow checklist markdown structure.
-# Usage: pwsh ./scripts/validate-checklist.ps1
-
+#
+# Usage:
+#   pwsh ./scripts/validate-checklist.ps1
+#
+# Example OK output:
+#   OK: checklist structure looks good (12 items).
+#
+# Example FAIL output:
+#   FAIL: missing headings:
+#     - ## Pairing (real collaborators only)
+#
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $checklist = Join-Path $root "checklists\workflow.md"
@@ -40,3 +49,4 @@ if ($checkboxCount -lt 8) {
 
 Write-Host "OK: checklist structure looks good ($checkboxCount items)." -ForegroundColor Green
 exit 0
+
